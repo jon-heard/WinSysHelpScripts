@@ -4,7 +4,7 @@
 #       folder (default: D:\Program Files\_sysHelpScripts)
 #       example:
 #           hotkeyRunner.pyw x myapp.exe
-#           runs myapp.exe when ctrl-shift-x is pressed
+#           runs myapp.exe when ctrl-ALT-X is pressed
 #           (folder "D:\Program Files\_sysHelpScripts")
 
 import keyboard
@@ -25,12 +25,12 @@ if argCount > 3:
 
 print("----------------------------------------------------------------------")
 print("  HOTKEY RUNNER")
-print("  (Pressing hotkey CTRL-SHIFT-" + hotkey + " executes '" + appToRun + "')")
+print("  (Pressing hotkey CTRL-ALT-" + hotkey + " executes '" + appToRun + "')")
 print("----------------------------------------------------------------------")
 
 def runApp():
     os.chdir(folder)
     os.system(appToRun)
-keyboard.add_hotkey("ctrl + shift + " + hotkey, runApp)
+keyboard.add_hotkey("ctrl + alt + " + hotkey, runApp)
 
 keyboard.wait()
